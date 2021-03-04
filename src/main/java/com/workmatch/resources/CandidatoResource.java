@@ -1,5 +1,6 @@
 package com.workmatch.resources;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CandidatoResource {
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String listarCandidato() {
-
-		return "Testando REST...";
+	public ResponseEntity<String> listarCandidato() {
+		return ResponseEntity.ok("Testando REST...");
 	}
-
 }
